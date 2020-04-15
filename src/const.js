@@ -17,3 +17,18 @@ export const MONTH_NAMES = [
   `December`,
 ];
 
+export const SORTING_NAMES = [
+  {
+    "title": `SORT BY DEFAULT`,
+    "sort-type": `default`
+  },
+  {
+    "title": `SORT BY DATE up`,
+    "sort-type": `date-up`
+  },
+  {
+    "title": `SORT BY DATE down`,
+    "sort-type": `date-down`
+  }
+];
+
