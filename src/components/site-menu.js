@@ -1,4 +1,4 @@
-import {createElement} from "../utils.js";
+import AbstractComponent from "./abstract-component.js";
 
 const createMenuTemplate = () => {
   return (
@@ -9,14 +9,12 @@ const createMenuTemplate = () => {
       <label for="control__new-task" class="control__label control__label--new-task">
         + ADD NEW TASK
       </label>
-
       <input type="radio" name="control"
         id="control__task"
         class="control__input visually-hidden" checked/>
       <label for="control__task" class="control__label">
         TASKS
       </label>
-
       <input type="radio" name="control"
         id="control__statistic"
         class="control__input visually-hidden"/>
@@ -27,24 +25,8 @@ const createMenuTemplate = () => {
   );
 };
 
-export default class SiteMenu {
-  constructor() {
-    this._element = null;
-  }
-
+export default class SiteMenu extends AbstractComponent {
   getTemplate() {
     return createMenuTemplate();
-  }
-
-  getElement() {
-    if (!this._element) {
-      this._element = createElement(this.getTemplate());
-    }
-
-    return this._element;
-  }
-
-  removeElement() {
-    this._element = null;
   }
 }
