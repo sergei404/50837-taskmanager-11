@@ -31,4 +31,3 @@ export const SORTING_NAMES = [
     "sort-type": `date-down`
   }
 ];
-
